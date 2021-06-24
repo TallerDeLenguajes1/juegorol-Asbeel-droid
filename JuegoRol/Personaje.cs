@@ -80,7 +80,7 @@ namespace JuegoRol
 
         public override string ToString()
         {
-            string obj = $"Tipo: {this.Tipo} \nNombre: {this.Nombre} \nApodo: {this.Apodo} \nFecha de Nacimiento: {this.FechaNacimiento} \nEdad: {this.Edad} \nVelocidad: {this.Velocidad} \nDestreza: {this.Destreza} \nFuerza: {this.Fuerza} \nNivel: {this.Nivel} \nArmadura: {this.Armadura}";
+            string obj = $"{this.Nombre}, {this.Apodo} --> Tipo: {this.Tipo} Edad: {this.Edad}";
             return obj;
         }
     }

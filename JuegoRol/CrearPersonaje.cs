@@ -7,29 +7,21 @@ namespace JuegoRol
     class CrearPersonaje
     {
         Random random = new Random();
-        uint botNumero;
-
-        public CrearPersonaje()
-        {
-            this.botNumero = 1;
-        }
-
-        public uint BotNumero { get => botNumero; set => botNumero = value; }
+        Personaje newPersonaje = new Personaje();
 
         public Personaje CrearPersonajeRandom()
         {
-            Personaje newPersonaje = new Personaje();
 
             Array valueTipo = Enum.GetValues(typeof(TipoPersonaje));
             newPersonaje.Tipo = (TipoPersonaje)valueTipo.GetValue(random.Next(valueTipo.Length)); // elije un valor aleatorio del enum TipoPersonaje
 
-            newPersonaje.Nombre = $"Bot {this.BotNumero}";
-            BotNumero++;
+            string[] nombre = { "Diana", "Leona", "Mundo", "Teemo", "Meliodas" };
+            newPersonaje.Nombre = nombre[random.Next(5)];
 
-            string[] apodos = { "Fachero", "Orito", "El Flamer", "Hierro", "El Hamster" };
+            string[] apodos = { " el Fachero", "el Orito", "el Flamer", "el de Hierro", "el Hamster" };
             newPersonaje.Apodo = apodos[random.Next(5)];
 
-            int aniosMenos = random.Next(0, 300);
+            int aniosMenos = random.Next(0, 267);// !!! es 300 pero el minimo del datepicker es 1754, 267 años atras
             newPersonaje.FechaNacimiento = DateTime.Now.AddYears(-aniosMenos);// a la fecha de hoy le resto entre 1 y 300
 
 
@@ -45,5 +37,6 @@ namespace JuegoRol
 
             return newPersonaje;
         }
+
     }
 }
