@@ -4,14 +4,14 @@ using System.Text;
 
 namespace JuegoRol
 {
-    enum TipoPersonaje
+    public enum TipoPersonaje
     {
         Humano,
         Elfo,
         Orco,
         Hobbit,
     }
-    class Personaje
+    public class Personaje
     {
         private TipoPersonaje tipo;
         private string nombre;
@@ -82,6 +82,11 @@ namespace JuegoRol
         {
             string obj = $"{this.Nombre}, {this.Apodo} --> Tipo: {this.Tipo} Edad: {this.Edad}";
             return obj;
+        }
+
+        public void DanioRecibido(Personaje enemigo)
+        {
+            Salud -= enemigo.ValorDeAtaque();// verificar mas tarde  :c
         }
     }
 }

@@ -10,9 +10,17 @@ namespace JuegoRol
 {
     public partial class viewPersonaje : Form
     {
-        public viewPersonaje()
+        Personaje unPersonaje;
+        public viewPersonaje(Personaje unPersonaje)
         {
             InitializeComponent();
+            this.unPersonaje = unPersonaje;
+            cargar();
+        }
+
+        private void cargar()
+        {
+            //aqui se cargan los lbl :D y la API
         }
     }
 }
