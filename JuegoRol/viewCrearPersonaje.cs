@@ -10,7 +10,7 @@ namespace JuegoRol
 {
     public partial class viewCrearPersonaje : Form
     {
-        Control elAdmin;
+        public Control elAdmin;
         public viewCrearPersonaje()
         {
             InitializeComponent();
@@ -21,7 +21,7 @@ namespace JuegoRol
         private void btnCrearPersonajeRandom_Click(object sender, EventArgs e)
         {
             elAdmin.crearPersonajeRandom();
-            //this.cboTipo.SelectedValue = unDistinto.Tipo;
+            //this.cboTipo.SelectedValue = (elAdmin.UnDistinto.Tipo).GetType();//Enum.GetValues(typeof(TipoPersonaje)).;
             this.txtNombre.Text = elAdmin.UnDistinto.Nombre;
             this.txtApodo.Text = elAdmin.UnDistinto.Apodo;
             this.dateTimeFechaNacimiento.Value = elAdmin.UnDistinto.FechaNacimiento;
@@ -71,7 +71,7 @@ namespace JuegoRol
             if (lstPersonajes.Items.Count > 1)
             {
                 Hide();
-                viewBatalla unaBatallaAIniciado = new viewBatalla(this.elAdmin);
+                viewBatalla unaBatallaAIniciado = new viewBatalla(this);
                 unaBatallaAIniciado.ShowDialog();
                 Show();
             }

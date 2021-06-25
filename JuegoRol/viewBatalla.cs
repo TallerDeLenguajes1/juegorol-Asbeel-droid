@@ -10,27 +10,28 @@ namespace JuegoRol
 {
     public partial class viewBatalla : Form
     {
-        Control elAdmiDeBatalla;
-        public viewBatalla(Control elAdmin)
+        Control elAdmi;
+        public viewBatalla(viewCrearPersonaje vista)
         {
             InitializeComponent();
-            this.elAdmiDeBatalla = elAdmin;//Es el mismo :B
-            cargar();// carga la list
+            this.elAdmi = vista.elAdmin;
+            cargar();// cargar lstParticipantes
         }
 
         private void cargar()
         {
-            LinkedListNode<Personaje> nodo = elAdmiDeBatalla.ListaPersonajes.First;
-            for (int i = 0; i < elAdmiDeBatalla.ListaPersonajes.Count; i++)
+            int i = 0;
+            LinkedListNode<Personaje> nodo = elAdmi.ListaPersonajes.First;
+            while (nodo != null)
             {
-                nodo = nodo.Previous;
-                lstPersonajesEnBatalla.Items.Insert(0, nodo.Value.ToString());
+                lstPersonajesEnBatalla.Items.Insert(i, nodo.Value.ToString());
+                nodo = nodo.Next;
             }
         }
 
         private void btnBatalla_Click(object sender, EventArgs e)
         {
-            elAdmiDeBatalla.dueloAMuerteConCuchillos();
+            elAdmi.dueloAMuerteConCuchillos();
         }
     }
 }

@@ -6,9 +6,9 @@ namespace JuegoRol
 {
     public class Control
     {
-        private Personaje unDistinto;
-        private Personaje unPeleadorMas;//
-        private LinkedList<Personaje> listaPersonajes;
+        public Personaje unDistinto;
+        public Personaje unPeleadorMas;//
+        public LinkedList<Personaje> listaPersonajes;
         Random random = new Random();
 
         public Control()
@@ -19,8 +19,8 @@ namespace JuegoRol
 
         public Personaje UnDistinto { get => unDistinto; }
         public Personaje UnPeleadorMas { get => unPeleadorMas; }
-        public LinkedList<Personaje> ListaPersonajes { get => listaPersonajes; }
-        
+        public LinkedList<Personaje> ListaPersonajes { get => listaPersonajes; set => listaPersonajes = value; }
+
         public void crearPersonajeRandom()
         {
 
@@ -50,8 +50,11 @@ namespace JuegoRol
 
         public string guardarPersonaje()
         {
+            //LinkedListNode<Personaje> nodo = new LinkedListNode<Personaje>(UnDistinto);
             listaPersonajes.AddFirst(unDistinto);
+
             return listaPersonajes.First.Value.ToString();
+            //return unDistinto.ToString();
         }
 
         public void borrarPersonaje(int indice)
