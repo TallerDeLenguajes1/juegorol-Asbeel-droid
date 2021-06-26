@@ -47,6 +47,8 @@ namespace JuegoRol
             this.lblTipoValue = new System.Windows.Forms.Label();
             this.lblTipo = new System.Windows.Forms.Label();
             this.lblApodo = new System.Windows.Forms.Label();
+            this.lblSalud = new System.Windows.Forms.Label();
+            this.lblSaludValue = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblNombre
@@ -72,7 +74,7 @@ namespace JuegoRol
             // lblFuerzaValue
             // 
             this.lblFuerzaValue.AutoSize = true;
-            this.lblFuerzaValue.Location = new System.Drawing.Point(114, 327);
+            this.lblFuerzaValue.Location = new System.Drawing.Point(114, 347);
             this.lblFuerzaValue.Name = "lblFuerzaValue";
             this.lblFuerzaValue.Size = new System.Drawing.Size(91, 17);
             this.lblFuerzaValue.TabIndex = 110;
@@ -81,7 +83,7 @@ namespace JuegoRol
             // lblFuerza
             // 
             this.lblFuerza.AutoSize = true;
-            this.lblFuerza.Location = new System.Drawing.Point(43, 327);
+            this.lblFuerza.Location = new System.Drawing.Point(43, 347);
             this.lblFuerza.Name = "lblFuerza";
             this.lblFuerza.Size = new System.Drawing.Size(49, 17);
             this.lblFuerza.TabIndex = 109;
@@ -90,7 +92,7 @@ namespace JuegoRol
             // lblArmaduraValue
             // 
             this.lblArmaduraValue.AutoSize = true;
-            this.lblArmaduraValue.Location = new System.Drawing.Point(114, 295);
+            this.lblArmaduraValue.Location = new System.Drawing.Point(114, 315);
             this.lblArmaduraValue.Name = "lblArmaduraValue";
             this.lblArmaduraValue.Size = new System.Drawing.Size(111, 17);
             this.lblArmaduraValue.TabIndex = 108;
@@ -99,7 +101,7 @@ namespace JuegoRol
             // lblArmadura
             // 
             this.lblArmadura.AutoSize = true;
-            this.lblArmadura.Location = new System.Drawing.Point(43, 295);
+            this.lblArmadura.Location = new System.Drawing.Point(43, 315);
             this.lblArmadura.Name = "lblArmadura";
             this.lblArmadura.Size = new System.Drawing.Size(69, 17);
             this.lblArmadura.TabIndex = 107;
@@ -108,7 +110,7 @@ namespace JuegoRol
             // lblVelocidadValue
             // 
             this.lblVelocidadValue.AutoSize = true;
-            this.lblVelocidadValue.Location = new System.Drawing.Point(114, 264);
+            this.lblVelocidadValue.Location = new System.Drawing.Point(114, 284);
             this.lblVelocidadValue.Name = "lblVelocidadValue";
             this.lblVelocidadValue.Size = new System.Drawing.Size(110, 17);
             this.lblVelocidadValue.TabIndex = 106;
@@ -117,7 +119,7 @@ namespace JuegoRol
             // lblVelocidad
             // 
             this.lblVelocidad.AutoSize = true;
-            this.lblVelocidad.Location = new System.Drawing.Point(43, 264);
+            this.lblVelocidad.Location = new System.Drawing.Point(43, 284);
             this.lblVelocidad.Name = "lblVelocidad";
             this.lblVelocidad.Size = new System.Drawing.Size(68, 17);
             this.lblVelocidad.TabIndex = 105;
@@ -127,7 +129,7 @@ namespace JuegoRol
             // 
             this.lblDestrezaValue.AllowDrop = true;
             this.lblDestrezaValue.AutoSize = true;
-            this.lblDestrezaValue.Location = new System.Drawing.Point(114, 233);
+            this.lblDestrezaValue.Location = new System.Drawing.Point(114, 253);
             this.lblDestrezaValue.Name = "lblDestrezaValue";
             this.lblDestrezaValue.Size = new System.Drawing.Size(104, 17);
             this.lblDestrezaValue.TabIndex = 104;
@@ -136,7 +138,7 @@ namespace JuegoRol
             // lblDestreza
             // 
             this.lblDestreza.AutoSize = true;
-            this.lblDestreza.Location = new System.Drawing.Point(43, 233);
+            this.lblDestreza.Location = new System.Drawing.Point(43, 253);
             this.lblDestreza.Name = "lblDestreza";
             this.lblDestreza.Size = new System.Drawing.Size(62, 17);
             this.lblDestreza.TabIndex = 103;
@@ -215,11 +217,31 @@ namespace JuegoRol
             this.lblApodo.TabIndex = 95;
             this.lblApodo.Text = "lblApodo";
             // 
+            // lblSalud
+            // 
+            this.lblSalud.AutoSize = true;
+            this.lblSalud.Location = new System.Drawing.Point(43, 226);
+            this.lblSalud.Name = "lblSalud";
+            this.lblSalud.Size = new System.Drawing.Size(43, 17);
+            this.lblSalud.TabIndex = 113;
+            this.lblSalud.Text = "Salud:";
+            // 
+            // lblSaludValue
+            // 
+            this.lblSaludValue.AutoSize = true;
+            this.lblSaludValue.Location = new System.Drawing.Point(114, 226);
+            this.lblSaludValue.Name = "lblSaludValue";
+            this.lblSaludValue.Size = new System.Drawing.Size(85, 17);
+            this.lblSaludValue.TabIndex = 114;
+            this.lblSaludValue.Text = "lblSaludValue";
+            // 
             // viewPersonaje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(525, 382);
+            this.Controls.Add(this.lblSaludValue);
+            this.Controls.Add(this.lblSalud);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblRandom);
             this.Controls.Add(this.lblFuerzaValue);
@@ -265,5 +287,7 @@ namespace JuegoRol
         private System.Windows.Forms.Label lblTipoValue;
         private System.Windows.Forms.Label lblTipo;
         private System.Windows.Forms.Label lblApodo;
+        private System.Windows.Forms.Label lblSalud;
+        private System.Windows.Forms.Label lblSaludValue;
     }
 }

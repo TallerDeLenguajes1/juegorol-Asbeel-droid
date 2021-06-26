@@ -21,7 +21,7 @@ namespace JuegoRol
         private void btnCrearPersonajeRandom_Click(object sender, EventArgs e)
         {
             elAdmin.crearPersonajeRandom();
-            //this.cboTipo.SelectedValue = (elAdmin.UnDistinto.Tipo).GetType();//Enum.GetValues(typeof(TipoPersonaje)).;
+            this.cboTipo.SelectedIndex = (int)elAdmin.UnDistinto.Tipo;
             this.txtNombre.Text = elAdmin.UnDistinto.Nombre;
             this.txtApodo.Text = elAdmin.UnDistinto.Apodo;
             this.dateTimeFechaNacimiento.Value = elAdmin.UnDistinto.FechaNacimiento;
@@ -33,7 +33,7 @@ namespace JuegoRol
             if (txtNombre.Text != "" && txtApodo.Text != "")
             {
                 identidadPersonaje = elAdmin.guardarPersonaje();
-                lstPersonajes.Items.Insert(0, identidadPersonaje);
+                lstPersonajes.Items.Add(identidadPersonaje);
             }
         }
 
@@ -73,6 +73,8 @@ namespace JuegoRol
                 Hide();
                 viewBatalla unaBatallaAIniciado = new viewBatalla(this);
                 unaBatallaAIniciado.ShowDialog();
+                viewPersonaje ganador = new viewPersonaje(elAdmin.ListaPersonajes.First.Value);
+                ganador.ShowDialog();
                 Show();
             }
             else

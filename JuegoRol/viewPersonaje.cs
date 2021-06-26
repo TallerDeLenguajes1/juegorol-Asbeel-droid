@@ -15,12 +15,21 @@ namespace JuegoRol
         {
             InitializeComponent();
             this.unPersonaje = unPersonaje;
-            cargar();
+            cargarPersonaje();
+            //cargarApi();
         }
 
-        private void cargar()
+        private void cargarApi()
         {
-            //aqui se cargan los lbl :D y la API
+            throw new NotImplementedException();
         }
+
+        private void cargarPersonaje()
+        {
+            lblNombre.Text = unPersonaje.Nombre;
+            lblApodo.Text = unPersonaje.Apodo;
+            lblTipoValue.Text = unPersonaje.Tipo.ToString();
+            lblEdadValue.Text = unPersonaje.Edad.ToString();
+            lblNivelValue.Text = unPersonaje.Nivel.ToString();            lblSaludValue.Text = unPersonaje.Salud.ToString();            lblVelocidadValue.Text = unPersonaje.Velocidad.ToString();            lblFuerzaValue.Text = unPersonaje.Fuerza.ToString();        }
     }
 }

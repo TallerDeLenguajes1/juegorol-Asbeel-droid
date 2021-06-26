@@ -6,23 +6,24 @@ namespace JuegoRol
 {
     public class Control
     {
-        public Personaje unDistinto;
-        public Personaje unPeleadorMas;//
-        public LinkedList<Personaje> listaPersonajes;
+        private Personaje unDistinto;
+        private Personaje unPeleadorMas;//
+        private LinkedList<Personaje> listaPersonajes;
         Random random = new Random();
 
         public Control()
         {
-            this.unDistinto = new Personaje(); ;
             this.listaPersonajes = new LinkedList<Personaje>();
+            this.unPeleadorMas = new Personaje(); 
         }
 
         public Personaje UnDistinto { get => unDistinto; }
         public Personaje UnPeleadorMas { get => unPeleadorMas; }
-        public LinkedList<Personaje> ListaPersonajes { get => listaPersonajes; set => listaPersonajes = value; }
+        public LinkedList<Personaje> ListaPersonajes { get => listaPersonajes; }
 
         public void crearPersonajeRandom()
         {
+            this.unDistinto = new Personaje();
 
             Array valueTipo = Enum.GetValues(typeof(TipoPersonaje));
             unDistinto.Tipo = (TipoPersonaje)valueTipo.GetValue(random.Next(valueTipo.Length)); // elije un valor aleatorio del enum TipoPersonaje
@@ -46,6 +47,12 @@ namespace JuegoRol
             unDistinto.Fuerza = random.Next(1, 11);
             unDistinto.Nivel = 1;
             unDistinto.Armadura = random.Next(1, 11);
+        }
+
+        internal void contrincante()
+        {
+            if(ListaPersonajes.Count > 1)
+                this.unPeleadorMas = ListaPersonajes.First.Next.Value;
         }
 
         public string guardarPersonaje()
@@ -73,18 +80,35 @@ namespace JuegoRol
         {
             listaPersonajes.Clear();
         }
-//-----------------------------------------------Metodos de vista Batalla
-        public void dueloAMuerteConCuchillos()//Duelo con todos los participantes
+        //-----------------------------------------------Metodos de vista Batalla
+        //public string dueloAMuerteConCuchillos()//Duelo con todos los participantes
+        //{
+        //    do
+        //    {
+        //        if (duelo())//inicia el duelo y el if se pregunta quien gano
+        //            listaPersonajes.Remove(unPeleadorMas);//Gano unDistinto -> remuevo unPeleadorMas
+        //        else
+        //            listaPersonajes.Remove(unDistinto);//Gano unPeleadorMas -> remuevo unDistinto
+        //    } while (listaPersonajes.Count > 1);
+
+        //    return listaPersonajes.First.Value.ToString();
+        //}
+
+        public bool dueloAMuerteConCuchillos()//Duelo con todos los participantes
         {
-            do
+            bool ganoUnDisinto = duelo();//inicia el duelo 
+            if (ganoUnDisinto)// true si gano unDistinto
             {
-                unDistinto = listaPersonajes.First.Value;//Selecciono los dos jugadores
-                unPeleadorMas = listaPersonajes.First.Next.Value;
-                if (duelo())//inicia el duelo y el if se pregunta quien gano
-                    listaPersonajes.Remove(unPeleadorMas);//Gano unDistinto -> remuevo unPeleadorMas
-                else
-                    listaPersonajes.Remove(unDistinto);//Gano unPeleadorMas -> remuevo unDistinto
-            } while (listaPersonajes.Count > 1);
+                listaPersonajes.Remove(unPeleadorMas);//Gano unDistinto -> remuevo unPeleadorMas
+                contrincante();//prepara al siguiente contrincante
+            }
+            else
+            {
+                listaPersonajes.Remove(unDistinto);//Gano unPeleadorMas -> remuevo unDistinto
+                unDistinto = ListaPersonajes.First.Value;
+                contrincante();//prepara al siguiente contrincante
+            }  
+            return ganoUnDisinto;
         }
 
         private bool duelo()// devuelve true si el ganador fue unDistinto
