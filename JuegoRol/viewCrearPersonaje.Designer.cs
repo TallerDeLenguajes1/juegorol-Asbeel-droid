@@ -201,6 +201,7 @@ namespace JuegoRol
             // 
             // dateTimeFechaNacimiento
             // 
+            this.dateTimeFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeFechaNacimiento.Location = new System.Drawing.Point(155, 189);
             this.dateTimeFechaNacimiento.Name = "dateTimeFechaNacimiento";
             this.dateTimeFechaNacimiento.Size = new System.Drawing.Size(208, 25);
@@ -237,6 +238,7 @@ namespace JuegoRol
             this.Controls.Add(this.groupBoxListaPersonajes);
             this.Controls.Add(this.groupBoxCrearPersonaje);
             this.Name = "viewCrearPersonaje";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "viewCrearPersonaje";
             this.groupBoxListaPersonajes.ResumeLayout(false);
             this.groupBoxCrearPersonaje.ResumeLayout(false);

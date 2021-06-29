@@ -203,6 +203,7 @@ namespace JuegoRol
             this.Controls.Add(this.lblTipo1);
             this.Controls.Add(this.lblApodo1);
             this.Name = "viewBatalla";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "viewBatalla";
             this.ResumeLayout(false);
             this.PerformLayout();

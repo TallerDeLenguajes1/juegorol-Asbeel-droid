@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;//libreria para guardar archivos
 using System.Text;
+using System.Text.Json;//libreria de json para comunicacion
+using System.Text.Json.Serialization;
 
 namespace JuegoRol
 {
@@ -81,7 +84,7 @@ namespace JuegoRol
             listaPersonajes.Clear();
         }
         //-----------------------------------------------Metodos de vista Batalla
-        //public string dueloAMuerteConCuchillos()//Duelo con todos los participantes
+        //public string dueloAMuerteConCuchillos()//lucha con todos los participantes
         //{
         //    do
         //    {
@@ -94,7 +97,7 @@ namespace JuegoRol
         //    return listaPersonajes.First.Value.ToString();
         //}
 
-        public bool dueloAMuerteConCuchillos()//Duelo con todos los participantes
+        public bool dueloAMuerteConCuchillos()//
         {
             bool ganoUnDisinto = duelo();//inicia el duelo 
             if (ganoUnDisinto)// true si gano unDistinto
@@ -107,8 +110,45 @@ namespace JuegoRol
                 listaPersonajes.Remove(unDistinto);//Gano unPeleadorMas -> remuevo unDistinto
                 unDistinto = ListaPersonajes.First.Value;
                 contrincante();//prepara al siguiente contrincante
-            }  
+            }
+            if (isGanador())
+            {
+                guardarGanadorJson("GanadorJson", ".json", ListaPersonajes.First.Value);
+                guardarGanadorCSV("Ganador", ".csv", ListaPersonajes.First.Value);
+            }
+
             return ganoUnDisinto;
+        }
+
+        private string crearArchivoJson(Personaje personaje)
+        {
+            return  JsonSerializer.Serialize(personaje);
+        }
+        private void guardarGanadorJson(string nombreArchivo, string formato, Personaje personaje)
+        {
+            FileStream miArchivoJson = new FileStream(nombreArchivo + formato, FileMode.Create);
+            using (StreamWriter strWriter = new StreamWriter(miArchivoJson))
+            {
+                strWriter.WriteLine("{0}", crearArchivoJson(personaje));
+
+                strWriter.Close();
+            }
+        }
+
+        private void guardarGanadorCSV(string nombreArchivo, string formato, Personaje personaje)
+        {
+            FileStream miArchivo = new FileStream(nombreArchivo+formato,FileMode.Create);
+            using (StreamWriter strWriter = new StreamWriter(miArchivo))
+            {
+                strWriter.WriteLine("{0};{1};{2}",personaje.Nombre,personaje.Apodo,personaje.Salud);
+
+                strWriter.Close();
+            }
+        }
+
+        private bool isGanador()
+        {
+            return ListaPersonajes.Count == 1 ;
         }
 
         private bool duelo()// devuelve true si el ganador fue unDistinto
@@ -121,9 +161,16 @@ namespace JuegoRol
                 b = random.Next(0, 2);
                 bool quienInicia = b==1 ? true : false; //condition? consequent : alternative
                 if (quienInicia)
-                    UnPeleadorMas.DanioRecibido(UnDistinto);//Inicia unDistinto
+                {
+                    b = UnDistinto.DanioProvocado(UnPeleadorMas);//Inicia unPeleadorMas
+                    UnPeleadorMas.ActualizarSalud(b);
+                }
                 else
-                    UnDistinto.DanioRecibido(UnPeleadorMas);//Inicia unPeleadorMas
+                {
+                    b = UnPeleadorMas.DanioProvocado(UnDistinto);//Inicia unDistinto
+                    UnDistinto.ActualizarSalud(b);
+                }
+                    
                 attack++;
             }
             

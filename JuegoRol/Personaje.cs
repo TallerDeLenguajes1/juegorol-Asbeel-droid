@@ -13,6 +13,7 @@ namespace JuegoRol
     }
     public class Personaje
     {
+        const int MDP = 50000;
         private TipoPersonaje tipo;
         private string nombre;
         private string apodo;
@@ -65,10 +66,10 @@ namespace JuegoRol
         private int EfectividadDeDisparo()
         {
             Random random = new Random();
-            return random.Next(1, 101);
+            return (random.Next(1, 101));
         }
 
-        public int ValorDeAtaque()
+        private int ValorDeAtaque()
         {
             return PoderDeDisparo() * EfectividadDeDisparo();
         }
@@ -78,15 +79,21 @@ namespace JuegoRol
             return this.Armadura * this.Velocidad;
         }
 
+        public int DanioProvocado(Personaje enemigo)
+        {
+            return (ValorDeAtaque() * EfectividadDeDisparo() - enemigo.PoderDeDefensa()) * 100 / MDP;
+        }
+
+        public void ActualizarSalud(int danio)
+        {
+            Salud -= danio;
+            if (Salud < 0) Salud = 0;
+        }
+
         public override string ToString()
         {
             string obj = $"{this.Nombre}, {this.Apodo} --> Tipo: {this.Tipo} Edad: {this.Edad}";
             return obj;
-        }
-
-        public void DanioRecibido(Personaje enemigo)
-        {
-            Salud -= enemigo.ValorDeAtaque();// verificar mas tarde  :c
         }
     }
 }

@@ -62,6 +62,11 @@ namespace JuegoRol
 
         private void btnLimpiarLista_Click(object sender, EventArgs e)
         {
+            limpiar();
+        }
+
+        private void limpiar()
+        {
             lstPersonajes.Items.Clear();
             elAdmin.limpiarLista();
         }
@@ -75,6 +80,7 @@ namespace JuegoRol
                 unaBatallaAIniciado.ShowDialog();
                 viewPersonaje ganador = new viewPersonaje(elAdmin.ListaPersonajes.First.Value);
                 ganador.ShowDialog();
+                limpiar();
                 Show();
             }
             else

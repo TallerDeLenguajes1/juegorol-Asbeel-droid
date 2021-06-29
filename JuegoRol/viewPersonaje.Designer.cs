@@ -30,7 +30,6 @@ namespace JuegoRol
         private void InitializeComponent()
         {
             this.lblNombre = new System.Windows.Forms.Label();
-            this.lblRandom = new System.Windows.Forms.Label();
             this.lblFuerzaValue = new System.Windows.Forms.Label();
             this.lblFuerza = new System.Windows.Forms.Label();
             this.lblArmaduraValue = new System.Windows.Forms.Label();
@@ -60,16 +59,6 @@ namespace JuegoRol
             this.lblNombre.Size = new System.Drawing.Size(107, 28);
             this.lblNombre.TabIndex = 112;
             this.lblNombre.Text = "lblNombre";
-            // 
-            // lblRandom
-            // 
-            this.lblRandom.AutoSize = true;
-            this.lblRandom.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblRandom.Location = new System.Drawing.Point(307, 152);
-            this.lblRandom.Name = "lblRandom";
-            this.lblRandom.Size = new System.Drawing.Size(203, 25);
-            this.lblRandom.TabIndex = 111;
-            this.lblRandom.Text = "inserte aqui una API :D";
             // 
             // lblFuerzaValue
             // 
@@ -239,11 +228,10 @@ namespace JuegoRol
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(525, 382);
+            this.ClientSize = new System.Drawing.Size(774, 437);
             this.Controls.Add(this.lblSaludValue);
             this.Controls.Add(this.lblSalud);
             this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.lblRandom);
             this.Controls.Add(this.lblFuerzaValue);
             this.Controls.Add(this.lblFuerza);
             this.Controls.Add(this.lblArmaduraValue);
@@ -261,6 +249,7 @@ namespace JuegoRol
             this.Controls.Add(this.lblTipo);
             this.Controls.Add(this.lblApodo);
             this.Name = "viewPersonaje";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "viewPersonaje";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -270,7 +259,6 @@ namespace JuegoRol
         #endregion
 
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label lblRandom;
         private System.Windows.Forms.Label lblFuerzaValue;
         private System.Windows.Forms.Label lblFuerza;
         private System.Windows.Forms.Label lblArmaduraValue;
