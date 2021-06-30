@@ -48,6 +48,8 @@ namespace JuegoRol
             this.lblApodo = new System.Windows.Forms.Label();
             this.lblSalud = new System.Windows.Forms.Label();
             this.lblSaludValue = new System.Windows.Forms.Label();
+            this.catApiImg = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.catApiImg)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNombre
@@ -224,11 +226,20 @@ namespace JuegoRol
             this.lblSaludValue.TabIndex = 114;
             this.lblSaludValue.Text = "lblSaludValue";
             // 
+            // catApiImg
+            // 
+            this.catApiImg.Location = new System.Drawing.Point(286, 61);
+            this.catApiImg.Name = "catApiImg";
+            this.catApiImg.Size = new System.Drawing.Size(364, 303);
+            this.catApiImg.TabIndex = 115;
+            this.catApiImg.TabStop = false;
+            // 
             // viewPersonaje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(774, 437);
+            this.ClientSize = new System.Drawing.Size(680, 437);
+            this.Controls.Add(this.catApiImg);
             this.Controls.Add(this.lblSaludValue);
             this.Controls.Add(this.lblSalud);
             this.Controls.Add(this.lblNombre);
@@ -251,6 +262,7 @@ namespace JuegoRol
             this.Name = "viewPersonaje";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "viewPersonaje";
+            ((System.ComponentModel.ISupportInitialize)(this.catApiImg)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,5 +289,6 @@ namespace JuegoRol
         private System.Windows.Forms.Label lblApodo;
         private System.Windows.Forms.Label lblSalud;
         private System.Windows.Forms.Label lblSaludValue;
+        private System.Windows.Forms.PictureBox catApiImg;
     }
 }

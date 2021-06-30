@@ -19,13 +19,13 @@ namespace JuegoRol
         {
             InitializeComponent();
             this.unPersonaje = unPersonaje;
+            cargarApi();
             cargarPersonaje();
-            //cargarApi();
         }
 
         private void cargarApi()
         {
-            var url = $"https://openwhyd.org/c/536f9264378de028700220ed?format=json";
+            var url = $"https://aws.random.cat/meow";
             var request = (HttpWebRequest)WebRequest.Create(url);
             request.Method = "GET";
             request.ContentType = "application/json";
@@ -39,10 +39,11 @@ namespace JuegoRol
                     using (StreamReader objReader = new StreamReader(strReader))
                     {
                         string responseBody = objReader.ReadToEnd();
-                        MusicApi p1 = JsonSerializer.Deserialize<MusicApi>(responseBody);
-                        p1.
-                           
-
+                        ApiCat cat = JsonSerializer.Deserialize<ApiCat>(responseBody);
+                        using (WebClient client = new WebClient())
+                        {
+                            client.DownloadFile(new Uri(cat.file), @"image35.png");
+                        }
                     }
 
                 }
@@ -55,6 +56,8 @@ namespace JuegoRol
             lblApodo.Text = unPersonaje.Apodo;
             lblTipoValue.Text = unPersonaje.Tipo.ToString();
             lblEdadValue.Text = unPersonaje.Edad.ToString();
-            lblNivelValue.Text = unPersonaje.Nivel.ToString();            lblSaludValue.Text = unPersonaje.Salud.ToString();            lblDestrezaValue.Text = unPersonaje.Destreza.ToString();            lblVelocidadValue.Text = unPersonaje.Velocidad.ToString();            lblArmaduraValue.Text = unPersonaje.Armadura.ToString();            lblFuerzaValue.Text = unPersonaje.Fuerza.ToString();        }
+            lblNivelValue.Text = unPersonaje.Nivel.ToString();            lblSaludValue.Text = unPersonaje.Salud.ToString();            lblDestrezaValue.Text = unPersonaje.Destreza.ToString();            lblVelocidadValue.Text = unPersonaje.Velocidad.ToString();            lblArmaduraValue.Text = unPersonaje.Armadura.ToString();            lblFuerzaValue.Text = unPersonaje.Fuerza.ToString();
+            catApiImg.Image = Image.FromFile("image35.png");
+        }
     }
 }

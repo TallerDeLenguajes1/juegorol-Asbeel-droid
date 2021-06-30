@@ -32,9 +32,27 @@ namespace JuegoRol
             string identidadPersonaje;
             if (txtNombre.Text != "" && txtApodo.Text != "")
             {
+                Personaje aux = new Personaje();
+                aux = elAdmin.UnDistinto;
+                if (aux.Apodo != txtApodo.Text || aux.Nombre != txtNombre.Text || (int)aux.Tipo != cboTipo.SelectedIndex || aux.FechaNacimiento != dateTimeFechaNacimiento.Value)
+                {
+                    editar();
+                }
                 identidadPersonaje = elAdmin.guardarPersonaje();
-                lstPersonajes.Items.Add(identidadPersonaje);
+                lstPersonajes.Items.Add(identidadPersonaje);//lstbox
             }
+            else
+            {
+                MessageBox.Show("Es posible que no haya ingresado una un Nombre o Apodo al personaje");
+            }
+        }
+
+        private void editar()
+        {
+            elAdmin.UnDistinto.Tipo = (TipoPersonaje)cboTipo.SelectedIndex;
+            elAdmin.UnDistinto.Nombre = txtNombre.Text;
+            elAdmin.UnDistinto.Apodo = txtApodo.Text;
+            elAdmin.UnDistinto.FechaNacimiento = dateTimeFechaNacimiento.Value;
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -53,11 +71,6 @@ namespace JuegoRol
         private void lstPersonajes_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             btnBorrar.PerformClick();
-        }
-
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("proximamente ?)");
         }
 
         private void btnLimpiarLista_Click(object sender, EventArgs e)

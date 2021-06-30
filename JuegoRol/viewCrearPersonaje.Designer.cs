@@ -32,7 +32,6 @@ namespace JuegoRol
             this.groupBoxListaPersonajes = new System.Windows.Forms.GroupBox();
             this.btnLimpiarLista = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.btnBatalla = new System.Windows.Forms.Button();
             this.lstPersonajes = new System.Windows.Forms.ListBox();
             this.groupBoxCrearPersonaje = new System.Windows.Forms.GroupBox();
@@ -55,7 +54,6 @@ namespace JuegoRol
             // 
             this.groupBoxListaPersonajes.Controls.Add(this.btnLimpiarLista);
             this.groupBoxListaPersonajes.Controls.Add(this.btnBorrar);
-            this.groupBoxListaPersonajes.Controls.Add(this.btnEditar);
             this.groupBoxListaPersonajes.Controls.Add(this.btnBatalla);
             this.groupBoxListaPersonajes.Controls.Add(this.lstPersonajes);
             this.groupBoxListaPersonajes.Location = new System.Drawing.Point(38, 345);
@@ -67,7 +65,7 @@ namespace JuegoRol
             // 
             // btnLimpiarLista
             // 
-            this.btnLimpiarLista.Location = new System.Drawing.Point(394, 170);
+            this.btnLimpiarLista.Location = new System.Drawing.Point(394, 150);
             this.btnLimpiarLista.Name = "btnLimpiarLista";
             this.btnLimpiarLista.Size = new System.Drawing.Size(88, 26);
             this.btnLimpiarLista.TabIndex = 4;
@@ -77,23 +75,13 @@ namespace JuegoRol
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Location = new System.Drawing.Point(394, 120);
+            this.btnBorrar.Location = new System.Drawing.Point(394, 100);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(88, 26);
             this.btnBorrar.TabIndex = 3;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Location = new System.Drawing.Point(394, 68);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(88, 26);
-            this.btnEditar.TabIndex = 2;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnBatalla
             // 
@@ -252,7 +240,6 @@ namespace JuegoRol
         private System.Windows.Forms.GroupBox groupBoxListaPersonajes;
         private System.Windows.Forms.Button btnLimpiarLista;
         private System.Windows.Forms.Button btnBorrar;
-        private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnBatalla;
         private System.Windows.Forms.ListBox lstPersonajes;
         private System.Windows.Forms.GroupBox groupBoxCrearPersonaje;
