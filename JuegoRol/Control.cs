@@ -114,7 +114,7 @@ namespace JuegoRol
             if (isGanador())
             {
                 guardarGanadorJson("GanadorJson", ".json", ListaPersonajes.First.Value);
-                guardarGanadorCSV("Ganador", ".csv", ListaPersonajes.First.Value);
+                //guardarGanadorCSV("Ganador", ".csv", ListaPersonajes.First.Value);
             }
 
             return ganoUnDisinto;
@@ -135,16 +135,15 @@ namespace JuegoRol
             }
         }
 
-        private void guardarGanadorCSV(string nombreArchivo, string formato, Personaje personaje)
-        {
-            FileStream miArchivo = new FileStream(nombreArchivo+formato,FileMode.Create);
-            using (StreamWriter strWriter = new StreamWriter(miArchivo))
-            {
-                strWriter.WriteLine("{0};{1};{2}",personaje.Nombre,personaje.Apodo,personaje.Salud);
-
-                strWriter.Close();
-            }
-        }
+        //private void guardarGanadorCSV(string nombreArchivo, string formato, Personaje personaje)
+        //{
+        //    FileStream miArchivo = new FileStream(nombreArchivo+formato,FileMode.Create);
+        //    using (StreamWriter strWriter = new StreamWriter(miArchivo))
+        //    {
+        //        strWriter.WriteLine("{0};{1};{2}",personaje.Nombre,personaje.Apodo,personaje.Salud);
+        //        strWriter.Close();
+        //    }
+        //}
 
         private bool isGanador()
         {
@@ -175,6 +174,28 @@ namespace JuegoRol
             }
             
             return (UnDistinto.Salud > UnPeleadorMas.Salud);
+        }
+
+        //Leer json
+        public string leerJson()
+        {
+            Personaje personajeJson;
+            string rutaDeArchivo = @"GanadorJson.json";
+
+            try
+            {
+                using (StreamReader leerJson = File.OpenText(rutaDeArchivo))
+                {
+                    var Json = leerJson.ReadToEnd();
+                    personajeJson = JsonSerializer.Deserialize<Personaje>(Json);
+                    listaPersonajes.AddFirst(personajeJson);
+                }
+                return listaPersonajes.First.Value.ToString();
+            }
+            catch (FileNotFoundException)
+            {
+                return "";
+            }
         }
     }
 }

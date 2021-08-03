@@ -16,6 +16,14 @@ namespace JuegoRol
             InitializeComponent();
             elAdmin = new Control();
             this.cboTipo.DataSource = Enum.GetValues(typeof(TipoPersonaje)); //usamos el enum para llenar el combobox uwu
+            cargarPersonajeJson();
+        }
+
+        private void cargarPersonajeJson()
+        {
+            string texto = elAdmin.leerJson();
+            if(texto != "")
+                lstPersonajes.Items.Add(texto);
         }
 
         private void btnCrearPersonajeRandom_Click(object sender, EventArgs e)
@@ -53,6 +61,7 @@ namespace JuegoRol
             elAdmin.UnDistinto.Nombre = txtNombre.Text;
             elAdmin.UnDistinto.Apodo = txtApodo.Text;
             elAdmin.UnDistinto.FechaNacimiento = dateTimeFechaNacimiento.Value;
+            elAdmin.UnDistinto.Edad = DateTime.Now.Year - dateTimeFechaNacimiento.Value.Year;
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
