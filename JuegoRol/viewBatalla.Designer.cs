@@ -42,15 +42,15 @@ namespace JuegoRol
             this.lblApodo2 = new System.Windows.Forms.Label();
             this.lstPersonajesEnBatalla = new System.Windows.Forms.ListBox();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.lblPoke1 = new System.Windows.Forms.Label();
+            this.lblPoke2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblNombre1
             // 
             this.lblNombre1.AutoSize = true;
             this.lblNombre1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNombre1.Location = new System.Drawing.Point(38, 37);
+            this.lblNombre1.Location = new System.Drawing.Point(43, 41);
             this.lblNombre1.Name = "lblNombre1";
             this.lblNombre1.Size = new System.Drawing.Size(118, 28);
             this.lblNombre1.TabIndex = 129;
@@ -59,27 +59,27 @@ namespace JuegoRol
             // lblNivel1
             // 
             this.lblNivel1.AutoSize = true;
-            this.lblNivel1.Location = new System.Drawing.Point(100, 181);
+            this.lblNivel1.Location = new System.Drawing.Point(114, 202);
             this.lblNivel1.Name = "lblNivel1";
-            this.lblNivel1.Size = new System.Drawing.Size(58, 17);
+            this.lblNivel1.Size = new System.Drawing.Size(61, 19);
             this.lblNivel1.TabIndex = 118;
             this.lblNivel1.Text = "lblNivel1";
             // 
             // lblNvel1
             // 
             this.lblNvel1.AutoSize = true;
-            this.lblNvel1.Location = new System.Drawing.Point(54, 181);
+            this.lblNvel1.Location = new System.Drawing.Point(62, 202);
             this.lblNvel1.Name = "lblNvel1";
-            this.lblNvel1.Size = new System.Drawing.Size(40, 17);
+            this.lblNvel1.Size = new System.Drawing.Size(42, 19);
             this.lblNvel1.TabIndex = 116;
             this.lblNvel1.Text = "Nivel:";
             // 
             // lblTipo1
             // 
             this.lblTipo1.AutoSize = true;
-            this.lblTipo1.Location = new System.Drawing.Point(70, 125);
+            this.lblTipo1.Location = new System.Drawing.Point(80, 140);
             this.lblTipo1.Name = "lblTipo1";
-            this.lblTipo1.Size = new System.Drawing.Size(55, 17);
+            this.lblTipo1.Size = new System.Drawing.Size(57, 19);
             this.lblTipo1.TabIndex = 115;
             this.lblTipo1.Text = "lblTipo1";
             // 
@@ -87,7 +87,7 @@ namespace JuegoRol
             // 
             this.lblApodo1.AutoSize = true;
             this.lblApodo1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblApodo1.Location = new System.Drawing.Point(44, 79);
+            this.lblApodo1.Location = new System.Drawing.Point(50, 88);
             this.lblApodo1.Name = "lblApodo1";
             this.lblApodo1.Size = new System.Drawing.Size(106, 28);
             this.lblApodo1.TabIndex = 113;
@@ -95,9 +95,9 @@ namespace JuegoRol
             // 
             // btnBatalla
             // 
-            this.btnBatalla.Location = new System.Drawing.Point(100, 261);
+            this.btnBatalla.Location = new System.Drawing.Point(114, 292);
             this.btnBatalla.Name = "btnBatalla";
-            this.btnBatalla.Size = new System.Drawing.Size(229, 45);
+            this.btnBatalla.Size = new System.Drawing.Size(262, 50);
             this.btnBatalla.TabIndex = 130;
             this.btnBatalla.Text = "Iniciar Batalla...!!!";
             this.btnBatalla.UseVisualStyleBackColor = true;
@@ -107,7 +107,7 @@ namespace JuegoRol
             // 
             this.lblNombre2.AutoSize = true;
             this.lblNombre2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblNombre2.Location = new System.Drawing.Point(282, 37);
+            this.lblNombre2.Location = new System.Drawing.Point(322, 41);
             this.lblNombre2.Name = "lblNombre2";
             this.lblNombre2.Size = new System.Drawing.Size(118, 28);
             this.lblNombre2.TabIndex = 136;
@@ -116,27 +116,27 @@ namespace JuegoRol
             // lblNivel2
             // 
             this.lblNivel2.AutoSize = true;
-            this.lblNivel2.Location = new System.Drawing.Point(335, 181);
+            this.lblNivel2.Location = new System.Drawing.Point(383, 202);
             this.lblNivel2.Name = "lblNivel2";
-            this.lblNivel2.Size = new System.Drawing.Size(58, 17);
+            this.lblNivel2.Size = new System.Drawing.Size(61, 19);
             this.lblNivel2.TabIndex = 135;
             this.lblNivel2.Text = "lblNivel2";
             // 
             // lblNvel2
             // 
             this.lblNvel2.AutoSize = true;
-            this.lblNvel2.Location = new System.Drawing.Point(289, 181);
+            this.lblNvel2.Location = new System.Drawing.Point(330, 202);
             this.lblNvel2.Name = "lblNvel2";
-            this.lblNvel2.Size = new System.Drawing.Size(40, 17);
+            this.lblNvel2.Size = new System.Drawing.Size(42, 19);
             this.lblNvel2.TabIndex = 134;
             this.lblNvel2.Text = "Nivel:";
             // 
             // lblTipo2
             // 
             this.lblTipo2.AutoSize = true;
-            this.lblTipo2.Location = new System.Drawing.Point(314, 125);
+            this.lblTipo2.Location = new System.Drawing.Point(359, 140);
             this.lblTipo2.Name = "lblTipo2";
-            this.lblTipo2.Size = new System.Drawing.Size(55, 17);
+            this.lblTipo2.Size = new System.Drawing.Size(57, 19);
             this.lblTipo2.TabIndex = 133;
             this.lblTipo2.Text = "lblTipo2";
             // 
@@ -144,7 +144,7 @@ namespace JuegoRol
             // 
             this.lblApodo2.AutoSize = true;
             this.lblApodo2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblApodo2.Location = new System.Drawing.Point(288, 79);
+            this.lblApodo2.Location = new System.Drawing.Point(329, 88);
             this.lblApodo2.Name = "lblApodo2";
             this.lblApodo2.Size = new System.Drawing.Size(106, 28);
             this.lblApodo2.TabIndex = 131;
@@ -153,42 +153,46 @@ namespace JuegoRol
             // lstPersonajesEnBatalla
             // 
             this.lstPersonajesEnBatalla.FormattingEnabled = true;
-            this.lstPersonajesEnBatalla.ItemHeight = 17;
-            this.lstPersonajesEnBatalla.Location = new System.Drawing.Point(451, 68);
+            this.lstPersonajesEnBatalla.ItemHeight = 19;
+            this.lstPersonajesEnBatalla.Location = new System.Drawing.Point(515, 76);
             this.lstPersonajesEnBatalla.Name = "lstPersonajesEnBatalla";
-            this.lstPersonajesEnBatalla.Size = new System.Drawing.Size(312, 191);
+            this.lstPersonajesEnBatalla.Size = new System.Drawing.Size(356, 213);
             this.lstPersonajesEnBatalla.TabIndex = 137;
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Location = new System.Drawing.Point(451, 37);
+            this.lblTitle.Location = new System.Drawing.Point(515, 41);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(91, 17);
+            this.lblTitle.Size = new System.Drawing.Size(96, 19);
             this.lblTitle.TabIndex = 138;
             this.lblTitle.Text = "Participantes...";
             // 
-            // progressBar1
+            // lblPoke1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(29, 208);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(137, 23);
-            this.progressBar1.TabIndex = 139;
+            this.lblPoke1.AutoSize = true;
+            this.lblPoke1.Location = new System.Drawing.Point(80, 239);
+            this.lblPoke1.Name = "lblPoke1";
+            this.lblPoke1.Size = new System.Drawing.Size(60, 19);
+            this.lblPoke1.TabIndex = 141;
+            this.lblPoke1.Text = "lblPoke1";
             // 
-            // progressBar2
+            // lblPoke2
             // 
-            this.progressBar2.Location = new System.Drawing.Point(273, 208);
-            this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(137, 23);
-            this.progressBar2.TabIndex = 140;
+            this.lblPoke2.AutoSize = true;
+            this.lblPoke2.Location = new System.Drawing.Point(359, 239);
+            this.lblPoke2.Name = "lblPoke2";
+            this.lblPoke2.Size = new System.Drawing.Size(60, 19);
+            this.lblPoke2.TabIndex = 142;
+            this.lblPoke2.Text = "lblPoke2";
             // 
             // viewBatalla
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(775, 327);
-            this.Controls.Add(this.progressBar2);
-            this.Controls.Add(this.progressBar1);
+            this.ClientSize = new System.Drawing.Size(886, 365);
+            this.Controls.Add(this.lblPoke2);
+            this.Controls.Add(this.lblPoke1);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.lstPersonajesEnBatalla);
             this.Controls.Add(this.lblNombre2);
@@ -225,7 +229,7 @@ namespace JuegoRol
         private System.Windows.Forms.Label lblApodo2;
         private System.Windows.Forms.ListBox lstPersonajesEnBatalla;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.ProgressBar progressBar2;
+        private System.Windows.Forms.Label lblPoke1;
+        private System.Windows.Forms.Label lblPoke2;
     }
 }

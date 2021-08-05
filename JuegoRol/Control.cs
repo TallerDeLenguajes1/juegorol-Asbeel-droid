@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;//libreria para guardar archivos
+using System.Net;
 using System.Text;
 using System.Text.Json;//libreria de json para comunicacion
 using System.Text.Json.Serialization;
@@ -50,6 +51,9 @@ namespace JuegoRol
             unDistinto.Fuerza = random.Next(1, 11);
             unDistinto.Nivel = 1;
             unDistinto.Armadura = random.Next(1, 11);
+
+            unDistinto.Pokemon = cargarPokeName(random.Next(1, 151));
+
         }
 
         internal void contrincante()
@@ -196,6 +200,49 @@ namespace JuegoRol
             {
                 return "";
             }
+        }
+
+
+        //=========================POKEAPI
+        //1° se agrega el atributo Pokemon a la clase Personaje 
+        //
+
+        private string cargarPokeName(int idPoke)
+        {
+            string pokeRandom = "-";
+
+            string url = $"https://pokeapi.co/api/v2/pokemon-form/" + idPoke + "/";
+            var request = (HttpWebRequest)WebRequest.Create(url);
+            request.Method = "GET";
+            request.ContentType = "application/json";
+            request.Accept = "application/json";
+
+            using (WebResponse response = request.GetResponse())
+            {
+                using (Stream strReader = response.GetResponseStream())
+                {
+                    //if (strReader != null)
+                    {
+                        using (StreamReader objReader = new StreamReader(strReader))
+                        {
+                            string responseBody = objReader.ReadToEnd();
+
+                            Pokemon pokeName = JsonSerializer.Deserialize<Pokemon>(responseBody);
+                            //Sprites pokeImga = JsonSerializer.Deserialize<Sprites>(responseBody);
+
+                            pokeRandom = pokeName.name;
+
+                            //using (WebClient client = new WebClient())
+                            //{
+                            //    client.DownloadFile(new Uri(pokeImga.back_default), @"1.png");
+                            //}
+                        }
+                    }
+
+
+                }
+            }
+            return pokeRandom;
         }
     }
 }

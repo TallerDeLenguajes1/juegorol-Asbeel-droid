@@ -37,10 +37,12 @@ namespace JuegoRol
             lblApodo1.Text = elAdmi.UnDistinto.Apodo.ToString();
             lblTipo1.Text = elAdmi.UnDistinto.Tipo.ToString();
             lblNivel1.Text = elAdmi.UnDistinto.Nivel.ToString();
+            lblPoke1.Text = elAdmi.UnDistinto.Pokemon.ToString();
             lblNombre2.Text = elAdmi.UnPeleadorMas.Nombre.ToString();
             lblApodo2.Text = elAdmi.UnPeleadorMas.Apodo.ToString();
             lblTipo2.Text = elAdmi.UnPeleadorMas.Tipo.ToString();
             lblNivel2.Text = elAdmi.UnPeleadorMas.Nivel.ToString();
+            lblPoke2.Text = elAdmi.UnPeleadorMas.Pokemon.ToString();
         }
 
         private void btnBatalla_Click(object sender, EventArgs e)

@@ -25,13 +25,14 @@ namespace JuegoRol
         private int fuerza;
         private int nivel;
         private int armadura;
+        private string pokemon;
 
         public Personaje()
         {
 
         }
 
-        public Personaje(TipoPersonaje tipo, string nombre, string apodo, DateTime fechaNacimiento, int edad, int salud, int velocidad, int destreza, int fuerza, int nivel, int armadura)
+        public Personaje(TipoPersonaje tipo, string nombre, string apodo, DateTime fechaNacimiento, int edad, int salud, int velocidad, int destreza, int fuerza, int nivel, int armadura, string pokemon)
         {
             this.Tipo = tipo;
             this.Nombre = nombre;
@@ -44,6 +45,7 @@ namespace JuegoRol
             this.Fuerza = fuerza;
             this.Nivel = nivel;
             this.Armadura = armadura;
+            this.Pokemon = pokemon;
         }
 
         public string Nombre { get => nombre; set => nombre = value; }
@@ -57,6 +59,7 @@ namespace JuegoRol
         public int Nivel { get => nivel; set => nivel = value; }
         public int Armadura { get => armadura; set => armadura = value; }
         internal TipoPersonaje Tipo { get => tipo; set => tipo = value; }
+        public string Pokemon { get => pokemon; set => pokemon = value; }
 
         private int PoderDeDisparo()
         {
@@ -92,7 +95,7 @@ namespace JuegoRol
 
         public override string ToString()
         {
-            string obj = $"{this.Nombre}, {this.Apodo} --> Tipo: {this.Tipo} Edad: {this.Edad}";
+            string obj = $"{this.Nombre}, {this.Apodo} --> Tipo: {this.Tipo} || Edad: {this.Edad} || Pokemon: {this.Pokemon}";
             return obj;
         }
     }

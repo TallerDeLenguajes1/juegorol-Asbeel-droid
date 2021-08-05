@@ -56,18 +56,18 @@ namespace JuegoRol
             this.groupBoxListaPersonajes.Controls.Add(this.btnBorrar);
             this.groupBoxListaPersonajes.Controls.Add(this.btnBatalla);
             this.groupBoxListaPersonajes.Controls.Add(this.lstPersonajes);
-            this.groupBoxListaPersonajes.Location = new System.Drawing.Point(38, 345);
+            this.groupBoxListaPersonajes.Location = new System.Drawing.Point(43, 386);
             this.groupBoxListaPersonajes.Name = "groupBoxListaPersonajes";
-            this.groupBoxListaPersonajes.Size = new System.Drawing.Size(515, 260);
+            this.groupBoxListaPersonajes.Size = new System.Drawing.Size(589, 291);
             this.groupBoxListaPersonajes.TabIndex = 13;
             this.groupBoxListaPersonajes.TabStop = false;
             this.groupBoxListaPersonajes.Text = "Lista de personajes";
             // 
             // btnLimpiarLista
             // 
-            this.btnLimpiarLista.Location = new System.Drawing.Point(394, 150);
+            this.btnLimpiarLista.Location = new System.Drawing.Point(160, 249);
             this.btnLimpiarLista.Name = "btnLimpiarLista";
-            this.btnLimpiarLista.Size = new System.Drawing.Size(88, 26);
+            this.btnLimpiarLista.Size = new System.Drawing.Size(101, 29);
             this.btnLimpiarLista.TabIndex = 4;
             this.btnLimpiarLista.Text = "Limpiar";
             this.btnLimpiarLista.UseVisualStyleBackColor = true;
@@ -75,9 +75,9 @@ namespace JuegoRol
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Location = new System.Drawing.Point(394, 100);
+            this.btnBorrar.Location = new System.Drawing.Point(53, 249);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(88, 26);
+            this.btnBorrar.Size = new System.Drawing.Size(101, 29);
             this.btnBorrar.TabIndex = 3;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
@@ -85,9 +85,9 @@ namespace JuegoRol
             // 
             // btnBatalla
             // 
-            this.btnBatalla.Location = new System.Drawing.Point(155, 226);
+            this.btnBatalla.Location = new System.Drawing.Point(333, 249);
             this.btnBatalla.Name = "btnBatalla";
-            this.btnBatalla.Size = new System.Drawing.Size(204, 26);
+            this.btnBatalla.Size = new System.Drawing.Size(233, 29);
             this.btnBatalla.TabIndex = 1;
             this.btnBatalla.Text = "Que inicie la batalla!";
             this.btnBatalla.UseVisualStyleBackColor = true;
@@ -96,10 +96,10 @@ namespace JuegoRol
             // lstPersonajes
             // 
             this.lstPersonajes.FormattingEnabled = true;
-            this.lstPersonajes.ItemHeight = 17;
-            this.lstPersonajes.Location = new System.Drawing.Point(26, 44);
+            this.lstPersonajes.ItemHeight = 19;
+            this.lstPersonajes.Location = new System.Drawing.Point(53, 36);
             this.lstPersonajes.Name = "lstPersonajes";
-            this.lstPersonajes.Size = new System.Drawing.Size(333, 174);
+            this.lstPersonajes.Size = new System.Drawing.Size(470, 194);
             this.lstPersonajes.TabIndex = 0;
             this.lstPersonajes.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lstPersonajes_MouseDoubleClick);
             // 
@@ -116,25 +116,25 @@ namespace JuegoRol
             this.groupBoxCrearPersonaje.Controls.Add(this.lblFechaNacimiento);
             this.groupBoxCrearPersonaje.Controls.Add(this.cboTipo);
             this.groupBoxCrearPersonaje.Controls.Add(this.txtApodo);
-            this.groupBoxCrearPersonaje.Location = new System.Drawing.Point(38, 24);
+            this.groupBoxCrearPersonaje.Location = new System.Drawing.Point(43, 27);
             this.groupBoxCrearPersonaje.Name = "groupBoxCrearPersonaje";
-            this.groupBoxCrearPersonaje.Size = new System.Drawing.Size(522, 301);
+            this.groupBoxCrearPersonaje.Size = new System.Drawing.Size(597, 336);
             this.groupBoxCrearPersonaje.TabIndex = 12;
             this.groupBoxCrearPersonaje.TabStop = false;
             this.groupBoxCrearPersonaje.Text = "Crear personaje";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(155, 79);
+            this.txtNombre.Location = new System.Drawing.Point(177, 88);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(208, 25);
+            this.txtNombre.Size = new System.Drawing.Size(237, 26);
             this.txtNombre.TabIndex = 4;
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(394, 112);
+            this.btnLimpiar.Location = new System.Drawing.Point(450, 125);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(88, 26);
+            this.btnLimpiar.Size = new System.Drawing.Size(101, 29);
             this.btnLimpiar.TabIndex = 9;
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = true;
@@ -143,17 +143,17 @@ namespace JuegoRol
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(30, 88);
+            this.lblNombre.Location = new System.Drawing.Point(34, 98);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(57, 17);
+            this.lblNombre.Size = new System.Drawing.Size(59, 19);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre";
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(394, 57);
+            this.btnGuardar.Location = new System.Drawing.Point(450, 64);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(88, 27);
+            this.btnGuardar.Size = new System.Drawing.Size(101, 30);
             this.btnGuardar.TabIndex = 8;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -162,17 +162,17 @@ namespace JuegoRol
             // lblTipo
             // 
             this.lblTipo.AutoSize = true;
-            this.lblTipo.Location = new System.Drawing.Point(30, 36);
+            this.lblTipo.Location = new System.Drawing.Point(34, 40);
             this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(34, 17);
+            this.lblTipo.Size = new System.Drawing.Size(35, 19);
             this.lblTipo.TabIndex = 1;
             this.lblTipo.Text = "Tipo";
             // 
             // btnCrearPersonajeRandom
             // 
-            this.btnCrearPersonajeRandom.Location = new System.Drawing.Point(155, 241);
+            this.btnCrearPersonajeRandom.Location = new System.Drawing.Point(177, 269);
             this.btnCrearPersonajeRandom.Name = "btnCrearPersonajeRandom";
-            this.btnCrearPersonajeRandom.Size = new System.Drawing.Size(208, 26);
+            this.btnCrearPersonajeRandom.Size = new System.Drawing.Size(238, 29);
             this.btnCrearPersonajeRandom.TabIndex = 7;
             this.btnCrearPersonajeRandom.Text = "Generar personaje random";
             this.btnCrearPersonajeRandom.UseVisualStyleBackColor = true;
@@ -181,48 +181,48 @@ namespace JuegoRol
             // lblApodo
             // 
             this.lblApodo.AutoSize = true;
-            this.lblApodo.Location = new System.Drawing.Point(30, 144);
+            this.lblApodo.Location = new System.Drawing.Point(34, 161);
             this.lblApodo.Name = "lblApodo";
-            this.lblApodo.Size = new System.Drawing.Size(48, 17);
+            this.lblApodo.Size = new System.Drawing.Size(50, 19);
             this.lblApodo.TabIndex = 2;
             this.lblApodo.Text = "Apodo";
             // 
             // dateTimeFechaNacimiento
             // 
             this.dateTimeFechaNacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimeFechaNacimiento.Location = new System.Drawing.Point(155, 189);
+            this.dateTimeFechaNacimiento.Location = new System.Drawing.Point(177, 211);
             this.dateTimeFechaNacimiento.Name = "dateTimeFechaNacimiento";
-            this.dateTimeFechaNacimiento.Size = new System.Drawing.Size(208, 25);
+            this.dateTimeFechaNacimiento.Size = new System.Drawing.Size(237, 26);
             this.dateTimeFechaNacimiento.TabIndex = 6;
             // 
             // lblFechaNacimiento
             // 
             this.lblFechaNacimiento.AutoSize = true;
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(30, 195);
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(34, 218);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
-            this.lblFechaNacimiento.Size = new System.Drawing.Size(130, 17);
+            this.lblFechaNacimiento.Size = new System.Drawing.Size(136, 19);
             this.lblFechaNacimiento.TabIndex = 3;
             this.lblFechaNacimiento.Text = "Fecha de Nacimiento";
             // 
             // cboTipo
             // 
-            this.cboTipo.Location = new System.Drawing.Point(155, 27);
+            this.cboTipo.Location = new System.Drawing.Point(177, 30);
             this.cboTipo.Name = "cboTipo";
-            this.cboTipo.Size = new System.Drawing.Size(208, 25);
+            this.cboTipo.Size = new System.Drawing.Size(237, 27);
             this.cboTipo.TabIndex = 0;
             // 
             // txtApodo
             // 
-            this.txtApodo.Location = new System.Drawing.Point(155, 135);
+            this.txtApodo.Location = new System.Drawing.Point(177, 151);
             this.txtApodo.Name = "txtApodo";
-            this.txtApodo.Size = new System.Drawing.Size(208, 25);
+            this.txtApodo.Size = new System.Drawing.Size(237, 26);
             this.txtApodo.TabIndex = 5;
             // 
             // viewCrearPersonaje
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(599, 628);
+            this.ClientSize = new System.Drawing.Size(685, 702);
             this.Controls.Add(this.groupBoxListaPersonajes);
             this.Controls.Add(this.groupBoxCrearPersonaje);
             this.Name = "viewCrearPersonaje";
