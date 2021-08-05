@@ -43,7 +43,7 @@ namespace JuegoRol
         public string url { get; set; }
     }
 
-    public class Root
+    public class PokemonRandom
     {
         public string form_name { get; set; }
         public List<object> form_names { get; set; }

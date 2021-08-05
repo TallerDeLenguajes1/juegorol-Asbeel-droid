@@ -221,25 +221,22 @@ namespace JuegoRol
             {
                 using (Stream strReader = response.GetResponseStream())
                 {
-                    //if (strReader != null)
+                    if (strReader != null)
                     {
                         using (StreamReader objReader = new StreamReader(strReader))
                         {
                             string responseBody = objReader.ReadToEnd();
 
-                            Pokemon pokeName = JsonSerializer.Deserialize<Pokemon>(responseBody);
-                            //Sprites pokeImga = JsonSerializer.Deserialize<Sprites>(responseBody);
+                            PokemonRandom poke = JsonSerializer.Deserialize<PokemonRandom>(responseBody);
 
-                            pokeRandom = pokeName.name;
+                            pokeRandom = poke.name;
 
-                            //using (WebClient client = new WebClient())
-                            //{
-                            //    client.DownloadFile(new Uri(pokeImga.back_default), @"1.png");
-                            //}
+                            using (WebClient client = new WebClient())
+                            {
+                                client.DownloadFile(new Uri(poke.sprites.front_default), pokeRandom + ".png");
+                            }
                         }
                     }
-
-
                 }
             }
             return pokeRandom;

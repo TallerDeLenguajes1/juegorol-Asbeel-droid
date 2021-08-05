@@ -44,6 +44,10 @@ namespace JuegoRol
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblPoke1 = new System.Windows.Forms.Label();
             this.lblPoke2 = new System.Windows.Forms.Label();
+            this.pokeImg1 = new System.Windows.Forms.PictureBox();
+            this.pokeImg2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pokeImg1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pokeImg2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNombre1
@@ -95,7 +99,7 @@ namespace JuegoRol
             // 
             // btnBatalla
             // 
-            this.btnBatalla.Location = new System.Drawing.Point(114, 292);
+            this.btnBatalla.Location = new System.Drawing.Point(110, 450);
             this.btnBatalla.Name = "btnBatalla";
             this.btnBatalla.Size = new System.Drawing.Size(262, 50);
             this.btnBatalla.TabIndex = 130;
@@ -156,7 +160,7 @@ namespace JuegoRol
             this.lstPersonajesEnBatalla.ItemHeight = 19;
             this.lstPersonajesEnBatalla.Location = new System.Drawing.Point(515, 76);
             this.lstPersonajesEnBatalla.Name = "lstPersonajesEnBatalla";
-            this.lstPersonajesEnBatalla.Size = new System.Drawing.Size(356, 213);
+            this.lstPersonajesEnBatalla.Size = new System.Drawing.Size(356, 289);
             this.lstPersonajesEnBatalla.TabIndex = 137;
             // 
             // lblTitle
@@ -186,11 +190,29 @@ namespace JuegoRol
             this.lblPoke2.TabIndex = 142;
             this.lblPoke2.Text = "lblPoke2";
             // 
+            // pokeImg1
+            // 
+            this.pokeImg1.Location = new System.Drawing.Point(43, 302);
+            this.pokeImg1.Name = "pokeImg1";
+            this.pokeImg1.Size = new System.Drawing.Size(155, 115);
+            this.pokeImg1.TabIndex = 143;
+            this.pokeImg1.TabStop = false;
+            // 
+            // pokeImg2
+            // 
+            this.pokeImg2.Location = new System.Drawing.Point(308, 302);
+            this.pokeImg2.Name = "pokeImg2";
+            this.pokeImg2.Size = new System.Drawing.Size(155, 115);
+            this.pokeImg2.TabIndex = 144;
+            this.pokeImg2.TabStop = false;
+            // 
             // viewBatalla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(886, 365);
+            this.ClientSize = new System.Drawing.Size(886, 524);
+            this.Controls.Add(this.pokeImg2);
+            this.Controls.Add(this.pokeImg1);
             this.Controls.Add(this.lblPoke2);
             this.Controls.Add(this.lblPoke1);
             this.Controls.Add(this.lblTitle);
@@ -209,6 +231,8 @@ namespace JuegoRol
             this.Name = "viewBatalla";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "viewBatalla";
+            ((System.ComponentModel.ISupportInitialize)(this.pokeImg1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pokeImg2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,5 +255,7 @@ namespace JuegoRol
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblPoke1;
         private System.Windows.Forms.Label lblPoke2;
+        private System.Windows.Forms.PictureBox pokeImg1;
+        private System.Windows.Forms.PictureBox pokeImg2;
     }
 }
